@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/header/header.component'; // Importa HeaderComponent
+import { RouterModule } from '@angular/router';  // Importa RouterModule
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss'],
+  imports: [HeaderComponent, RouterModule],  // Aggiungi HeaderComponent nella proprietà `imports`
 })
 export class AppComponent {
-  title = 'gestione-contabilita';
+  title = 'my-app';
 }

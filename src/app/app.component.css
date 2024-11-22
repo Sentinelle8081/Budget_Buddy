@@ -1,46 +1,64 @@
-/* Stile globale della navbar */
-.navbar {
+.main-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  min-height: calc(100vh - 100px); /* Altezza totale meno header e footer */
+  background-color: #f9f9f9; /* Colore di sfondo leggero */
+}
+
+/* Stile delle notifiche */
+.notification-container {
+  display: flex;
+  flex-wrap: wrap; /* Per posizionare i blocchi su più righe se necessario */
+  gap: 20px; /* Spazio tra le notifiche */
+  justify-content: center; /* Centrare i blocchi */
+}
+
+.notification {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
+  padding: 15px;
+  border: 1px solid #ddd; /* Bordo leggero */
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Stile per layout vuoto */
+.empty-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Due colonne */
+  gap: 20px; /* Spazio tra i blocchi */
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333; /* Colore di sfondo della navbar */
-  color: white;
+  justify-items: center;
+  height: 100%; /* Occupa tutto lo spazio disponibile */
 }
 
-.logo img {
-  height: 40px; /* Imposta la dimensione del logo */
-}
-
-.navbar-title {
-  flex-grow: 1; /* Fai crescere questo div per centrare il titolo */
+.placeholder {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid #ddd;
   text-align: center;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 20px; /* Spaziatura tra i link */
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: white; /* Colore dei link */
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-  color: #ff9900; /* Colore al passaggio del mouse */
+  font-size: 1.1rem;
+  color: #666;
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
+  .notification-container {
+    grid-template-columns: 1fr; /* Una colonna sui dispositivi mobili */
   }
 
-  .navbar-links {
-    flex-direction: column;
-    gap: 10px;
+  .empty-content {
+    grid-template-columns: 1fr; /* I placeholder si dispongono in una sola colonna */
+  }
+}
+
+@media (max-width: 480px) {
+  .placeholder,
+  .notification {
+    font-size: 0.9rem; /* Riduci leggermente la dimensione del testo */
+    padding: 10px; /* Riduci il padding */
   }
 }

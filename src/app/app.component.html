@@ -1,21 +1,25 @@
 <app-header></app-header>
-<header>
-  <div class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo" />
+<div class="main-content">
+  <div
+    *ngIf="notifications && notifications.length > 0"
+    class="notification-container"
+  >
+    <div *ngFor="let notification of notifications" class="notification">
+      <p>{{ notification.message }}</p>
     </div>
-    <div class="navbar-title">
-      <h1>Badget Buddy</h1>
-    </div>
-    <nav class="navbar-links">
-      <a routerLink="/">Home</a>
-      <a routerLink="/calendario">Calendario</a>
-      <a routerLink="/moneymap">Moneymap</a>
-      <a routerLink="/login">Login</a>
-      <a routerLink="/register">Registrazione</a>
-    </nav>
   </div>
-</header>
+  <div
+    *ngIf="!notifications || notifications.length === 0"
+    class="empty-content"
+  >
+    <div class="placeholder">
+      <p>Non ci sono notifiche al momento.</p>
+    </div>
+    <div class="placeholder">
+      <p>Registra spese o entrate nel calendario per iniziare.</p>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
 <!-- Qui verranno visualizzati i componenti delle rotte -->

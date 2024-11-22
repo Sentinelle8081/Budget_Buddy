@@ -1,0 +1,66 @@
+header {
+  background-color: #f8f9fa; /* Sfondo chiaro */
+  padding: 10px 20px;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Contenitore logo + nome */
+    .logo-name-container {
+      display: flex;
+      align-items: center; /* Allinea logo e testo verticalmente */
+      justify-content: center;
+      gap: 10px; /* Spazio tra logo e nome */
+      padding: 10px 0;
+
+      .logo {
+        height: 2.5rem; /* Altezza dinamica del logo */
+        width: auto; /* Mantiene il rapporto d'aspetto */
+      }
+
+      h1 {
+        font-size: 2.5rem; /* Dimensione del nome */
+        font-weight: bold;
+        margin: 0;
+        color: #333;
+        text-align: center;
+      }
+    }
+  }
+
+  /* Link di navigazione */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i link */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+
+    li a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap; /* Permette di andare a capo se lo spazio è insufficiente */
+    gap: 10px; /* Riduce lo spazio su schermi più piccoli */
+  }
+
+  li a {
+    font-size: 0.9rem; /* Riduce leggermente la dimensione */
+  }
+}

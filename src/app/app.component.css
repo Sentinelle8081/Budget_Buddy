@@ -17,13 +17,20 @@
 .notification {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
   padding: 15px;
   border: 1px solid #ddd; /* Bordo leggero */
   font-size: 1rem;
   color: #333;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetti di transizione */
 }
-
+.notification:hover {
+  transform: translateY(-10px) scale(1.05); /* Solleva e ingrandisce il blocco */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombreggiatura più pronunciata */
+  cursor: pointer;
+}
 /* Stile per layout vuoto */
 .empty-content {
   display: grid;

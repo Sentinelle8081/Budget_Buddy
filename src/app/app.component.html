@@ -1,4 +1,21 @@
 <app-header></app-header>
-<!-- Se hai un header come nel nostro esempio -->
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+    <div class="navbar-title">
+      <h1>Badget Buddy</h1>
+    </div>
+    <nav class="navbar-links">
+      <a routerLink="/">Home</a>
+      <a routerLink="/calendario">Calendario</a>
+      <a routerLink="/moneymap">Moneymap</a>
+      <a routerLink="/login">Login</a>
+      <a routerLink="/register">Registrazione</a>
+    </nav>
+  </div>
+</header>
+
 <router-outlet></router-outlet>
 <!-- Qui verranno visualizzati i componenti delle rotte -->

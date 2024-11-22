@@ -1,0 +1,46 @@
+/* Stile globale della navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Colore di sfondo della navbar */
+  color: white;
+}
+
+.logo img {
+  height: 40px; /* Imposta la dimensione del logo */
+}
+
+.navbar-title {
+  flex-grow: 1; /* Fai crescere questo div per centrare il titolo */
+  text-align: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Spaziatura tra i link */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white; /* Colore dei link */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff9900; /* Colore al passaggio del mouse */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
